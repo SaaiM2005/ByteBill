@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import WelcomePage from './pages/WelcomePage';
 import SignUpPage from './pages/SignUpPage';
 import SignInPage from './pages/SignInPage';
-import DashboardPage from './pages/DashboardPage';
+import DashboardPage from './pages/AddExpense';
 import ProtectedRoute from './routes/ProtectedRoute';
 
 const App = () => {

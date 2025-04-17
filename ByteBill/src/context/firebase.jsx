@@ -1,14 +1,22 @@
 // src/firebase.jsx
 
 import React, { createContext, useContext, useEffect, useState } from 'react';
+import {
+  signInWithEmailAndPassword,
+  GoogleAuthProvider,
+  signInWithPopup,
+} from 'firebase/auth';
 import { initializeApp } from 'firebase/app';
 import {
   getAuth,
   onAuthStateChanged,
-  signInWithEmailAndPassword,
   signOut,
   createUserWithEmailAndPassword,
 } from 'firebase/auth';
+
+const provider = new GoogleAuthProvider();
+
+const signInWithGoogle = () => signInWithPopup(auth, provider);
 
 // Firebase configuration
 const firebaseConfig = {
@@ -50,7 +58,15 @@ export const FirebaseProvider = ({ children }) => {
 
   return (
     <FirebaseContext.Provider
-      value={{ auth, user, loading, signIn, signUp, logout }}
+      value={{
+        auth,
+        user,
+        loading,
+        signIn,
+        signUp,
+        logout,
+        signInWithGoogle,
+      }}
     >
       {children}
     </FirebaseContext.Provider>
