@@ -21,7 +21,7 @@ const OfflineExpensePage = () => {
       <div className="bg-green-100 border-l-4 border-green-500 p-6 rounded-xl shadow-md max-w-2xl text-center mb-10 animate-fade-in">
         <p className="text-xl md:text-2xl text-green-800 font-semibold italic">
           “Switch to online billing — it’s more than convenience, it’s your
-          contribution to a cleaner, greener planet.”
+          contribution to a cleaner, greener planet...”
         </p>
       </div>
 
