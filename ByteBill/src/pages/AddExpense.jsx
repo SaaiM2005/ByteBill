@@ -102,7 +102,10 @@ const AddExpense = () => {
           <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 text-lg transition duration-200">
             Online Expense
           </button>
-          <button className="bg-yellow-500 text-white px-6 py-3 rounded-lg hover:bg-yellow-600 text-lg transition duration-200">
+          <button
+            onClick={() => navigate('/offline-expense')}
+            className="bg-yellow-500 text-white px-6 py-3 rounded-lg hover:bg-yellow-600 text-lg transition duration-200"
+          >
             Offline Expense
           </button>
         </div>

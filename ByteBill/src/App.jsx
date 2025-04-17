@@ -6,6 +6,7 @@ import WelcomePage from './pages/WelcomePage';
 import SignUpPage from './pages/SignUpPage';
 import SignInPage from './pages/SignInPage';
 import DashboardPage from './pages/AddExpense';
+import OfflineExpensePage from './pages/OfflineExpensePage'; // ✅ NEW
 import ProtectedRoute from './routes/ProtectedRoute';
 
 const App = () => {
@@ -20,6 +21,14 @@ const App = () => {
           element={
             <ProtectedRoute>
               <DashboardPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/offline-expense"
+          element={
+            <ProtectedRoute>
+              <OfflineExpensePage />
             </ProtectedRoute>
           }
         />
