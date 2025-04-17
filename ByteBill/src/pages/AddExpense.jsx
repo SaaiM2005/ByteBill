@@ -37,7 +37,7 @@ const AddExpense = () => {
             onClick={() => setShowDropdown((prev) => !prev)}
             className="flex items-center gap-2 bg-white border border-gray-300 text-gray-700 font-medium px-4 py-2 rounded-lg shadow-sm hover:bg-gray-100 transition duration-150 ease-in-out"
           >
-            Menu
+            More Options
             <svg
               className="h-5 w-5"
               fill="none"
@@ -102,7 +102,10 @@ const AddExpense = () => {
           <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 text-lg transition duration-200">
             Online Expense
           </button>
-          <button className="bg-yellow-500 text-white px-6 py-3 rounded-lg hover:bg-yellow-600 text-lg transition duration-200">
+          <button
+            onClick={() => navigate('/offline-expense')}
+            className="bg-yellow-500 text-white px-6 py-3 rounded-lg hover:bg-yellow-600 text-lg transition duration-200"
+          >
             Offline Expense
           </button>
         </div>
